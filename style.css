@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(252, 241, 243);
+    overflow: auto;
+}
+
+/* home-page css starts  */
+
+
+.home-page{
+    background-color: #2D25A0;
+    height: 700px;
+    padding: 80px 150px;
+    position: relative;
+}
+
+.firsticon{
+    position: absolute;
+    top: 100px;
+}
+
+.intro-page{
+    display: flex;
+    align-items: center;
+}
+
+.home-page img{
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    right: 300px;
+    top: 30px;
+    margin: 0px;
+    animation-name: home-animation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+
+.watch-live:hover{
+    border-radius: 10px;
+    background-image: linear-gradient(orange, tomato);
+    border: none;
+}
+
+@keyframes home-animation{
+    25%{
+        transform: rotate(25deg);
+    }
+
+    50%{
+        transform: rotate(60deg);
+    }
+
+    100%{
+        transform: rotate(90deg);
+    }
+
+}
+
+.home-page h1{
+    color: white;
+    font-size: 70px;
+}
+
+.watch-live{
+    border: 2px solid #dd3472;
+    background-color: #dd296b;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    color: white;
+    position: absolute;
+    left: 150px;
+    top: 380px;
+}
+
+/* home-page css ends  */
+
+
+/* team players css starts */
+
+.team-page{
+    margin-top: 100px;
+    width: 880px;
+}
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 100px;
+    grid-gap: 50px;
+}
+
+
+.player{
+    border: 6px solid #ffffff;
+    box-shadow:  rgb(209, 206, 206) ;
+    border-radius: 10px;
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+    animation-name: player-animation;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+@keyframes player-animation{
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+
+.player img{
+    width: 200px;
+    margin: 20px 200px;
+    height: 200px;
+
+}
+
+
+.player-title{
+    text-align: center;
+    font-size: 20px;
+}
+
+.player-detail{
+    color: rgb(124, 122, 122);
+    font-size: 20px;
+}
+
+/* team players css ends */
+
+/* match highlight starts here */
+
+.match-highlights{
+   margin-top: 200px;
+   display: flex;
+   position: relative;
+  
+}
+
+.highlight-title{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+
+
+.highlight-title, .highlight-details{
+    margin-left: 60px;
+}
+
+.highlight-introduction h1{
+    font-size: 50px;
+}
+
+.highlight-banner{
+    height: 500px;
+    width: 600px;
+    margin-left: 300px;
+}
+
+.highlight-details{
+    font-size: 20px;
+
+}
+
+.highlight-link{
+    border: 2px solid #dd3472;
+    background-color: #dd296b;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none; 
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    z-index: -1;
+    width: 120px;
+}
+
+.highlight-link:hover{
+    background-image: linear-gradient(orange,red);
+}
+
+.icon{
+    height: 30px;
+    margin: 40px 180px;
+    z-index: -1;
+}
+
+/* match highlight ends */
+
+/* newsletter css starts */
+
+.subscription{
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.subscription-info{
+    margin-top: 200px;
+}
+
+.subscription h1{
+    font-size: 50px;
+}
+
+
+.subscription span{
+    color: rgb(0, 0, 255);
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.subscription input{
+    height: 100px;
+    width: 600px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid blue;
+    background: transparent;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 200px;
+
+}
+
+/* footer starts here */
+.footer-logo{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+
+.down-footer p{
+    margin-left: 100px;
+}
+
+.down-footer{
+    margin-top: 20px;
+    margin-left: 700px;
+}
+
+
+@media only screen and (max-width: 688px){
+
+    .container{
+        width: 100%;
+    }
+
+
+    .intro-page img{
+        width: 50%;
+        margin-top: 400px;
+    }
+
+    .players{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .player{
+        flex-direction: column;
+    }
+
+    .home-page h1{
+        font-size: 50px;
+    }
+
+    .player{
+        
+        display: block;
+        width: 50%;
+        height: 100%;
+        margin-top: 50px;
+    }
+
+    .players img{
+        margin-left: 20px;
+    }
+    .highlight-title{
+        font-size: 30px;
+    }
+
+    .subscription-info{
+        font-size: 50%;
+        width: 50%;
+        position: relative;
+    }
+
+    .email-area input{
+        width: 50%;
+        position: absolute;
+        top: 65%;
+    }
+
+    ::placeholder{
+        font-size: 50%;
+        
+    }
+
+    .highlight-banner{
+        margin-right: 300px;
+        margin-top: 300px;
+        width: 50%;
+    }
+
+    .down-footer{
+        position: absolute;
+        top: 20%;
+    }
+
+
+
+
+
+}
